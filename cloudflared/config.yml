@@ -1,0 +1,11 @@
+tunnel: <YOUR-TUNNEL-ID>
+credentials-file: /etc/cloudflared/<YOUR-TUNNEL-ID>.json
+
+ingress:
+  - hostname: mytixe.me
+    service: http://localhost:80
+  - hostname: www.mytixe.me
+    service: http://localhost:80
+  - hostname: blog.mytixe.me
+    service: http://localhost:80
+  - service: http_status:404
